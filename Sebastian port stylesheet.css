@@ -38,6 +38,28 @@ body {
         background-attachment: fixed;
         min-height: 100vh;
     }
+.hero {
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+#sidebarHero {
+   height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+#sidebarHero-image {
+    width: 80px;
+    height: 150px;
+    object-fit: contain;
+    transform: scaleX(-1);
+}
 .sidebar {
     position: fixed;
     width: 160px;
@@ -51,7 +73,8 @@ body {
 .sidebar nav {
   display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    padding-top: 30px;
 }
 .sidebar a {
     color: var(--text);
@@ -73,6 +96,23 @@ body {
 }
 .page-header h1 {
     margin: 0;
+}
+.aboutText {
+margin: 0;
+padding: 40px 60px;
+}
+.aboutText p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+.EK-link {
+    color: var(--text);
+}
+.EK-link:hover {
+    text-decoration: underline;
+    color: var(--bright-blue);
 }
 .content {
     flex: 1;
