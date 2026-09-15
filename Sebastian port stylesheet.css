@@ -16,8 +16,7 @@ body {
         margin: 0;
         font-family: Arial, sans-serif;
         color: var(--text);
-
-        background:
+    background:
                 radial-gradient(
                         circle at top right,
                         #477ee8 0%,
@@ -113,6 +112,22 @@ padding: 40px 60px;
 .EK-link:hover {
     text-decoration: underline;
     color: var(--bright-blue);
+}
+.educationAndJobsText {
+    margin: 0;
+    padding: 40px 60px 10px;
+}
+.educationAndJobsText p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+.educationAndJobsList {
+    margin: 0;
+    padding: 10px 60px 40px;
+    font-size: 16px;
+    line-height: 1.6;
 }
 .content {
     flex: 1;
