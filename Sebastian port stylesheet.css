@@ -1,3 +1,7 @@
+/*============
+  GLOBAL
+ ============*/
+
 :root {
         --background: #1e1e1e;
         --dark-blue: #193873;
@@ -14,46 +18,49 @@
     }
 body {
         margin: 0;
-        font-family: Arial, sans-serif;
+        font-family: "Space Grotesk", sans-serif;
         color: var(--text);
-    background:
-                radial-gradient(
-                        circle at top right,
-                        #477ee8 0%,
-                        transparent 45%
-                ),
-                radial-gradient(
-                        circle at bottom left,
-                        #193873 0%,
-                        transparent 50%
-                ),
-                linear-gradient(
-                        135deg,
-                        #1e1e1e 0%,
-                        #193873 55%,
-                        #2c63d6 100%
-                );
-
-        background-attachment: fixed;
         min-height: 100vh;
     }
-.hero {
-    display: flex;
-    justify-content: flex-end;
+h1 {
+    font-weight: 700;
 }
-.hero-image {
-    width: 400px;
-    max-width: 100%;
-    height: auto;
+
+p {
+    font-weight: 400;
 }
-#sidebarHero {
+/*===============
+   BACKGROUND
+   =============*/
+.content {
+    flex: 1;
+    background:
+            radial-gradient(
+                    circle at top right,
+                    var(--bright-blue) 0%,
+                    transparent 55%
+            ),
+            linear-gradient(
+                    110deg,
+                    var(--background) 0%,
+                    var(--dark-blue) 35%,
+                    var(--blue) 75%,
+                    var(--bright-blue) 100%
+            );
+}
+
+/*==============
+   SIDEBAR
+================*/
+
+#sidebar-hero {
    height: 75px;
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
 }
-#sidebarHero-image {
+#sidebar-hero-image {
     width: 80px;
     height: 150px;
     object-fit: contain;
@@ -83,6 +90,10 @@ body {
     color: var(--bright-blue);
     text-decoration: underline;
 }
+/*=================
+SHARED PAGE LAYOUT
+===================*/
+
 .page {
     min-height: 100vh;
     margin-left: 160px;
@@ -90,65 +101,32 @@ body {
     flex-direction: column;
 }
 .page-header {
-    padding: 40px 60px;
+    padding: 30px 60px;
     border-bottom: 1px solid var(--border);
 }
 .page-header h1 {
     margin: 0;
 }
-.aboutText {
-margin: 0;
-padding: 40px 60px;
-}
-.aboutText p {
-    max-width: 600px;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0 0 20px;
-}
-.EK-link {
-    color: var(--text);
-}
-.EK-link:hover {
-    text-decoration: underline;
-    color: var(--bright-blue);
-}
-.educationAndJobsText {
-    margin: 0;
-    padding: 40px 60px 10px;
-}
-.educationAndJobsText p {
-    max-width: 600px;
-    font-size: 16px;
-    line-height: 1.6;
-    margin: 0 0 20px;
-}
-.educationAndJobsList {
-    margin: 0;
-    padding: 10px 60px 40px;
-    font-size: 16px;
-    line-height: 1.6;
-}
-.content {
-    flex: 1;
-    background:
-            radial-gradient(
-                    circle at top right,
-                    var(--bright-blue) 0%,
-                    transparent 55%
-            ),
-            linear-gradient(
-                    110deg,
-                    var(--background) 0%,
-                    var(--dark-blue) 35%,
-                    var(--blue) 75%,
-                    var(--bright-blue) 100%
-            );
+.page-header p{
+    font-size: 13px;
 }
 section {
     padding: 40px;
     box-sizing: border-box;
 }
+/*==============
+ HOMEPAGE
+ ==============*/
+.hero {
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-image {
+    width: 400px;
+    max-width: 100%;
+    height: auto;
+}
+/*contact-list*/
 .contact-list {
     display: flex;
     flex-direction: row;
@@ -170,4 +148,156 @@ footer {
 .contact-list a:hover {
     text-decoration: underline;
     color: var(--bright-blue);
+}
+/*==========
+   ABOUT
+ =========*/
+.about-text {
+margin: 0;
+padding: 40px 60px;
+}
+.about-text p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+.about-image {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+.EK-link {
+    color: var(--text);
+}
+.EK-link:hover {
+    text-decoration: underline;
+    color: var(--bright-blue);
+}
+
+/*=================
+  EducationAndJobs
+  =================*/
+
+.educations-and-jobs-text {
+    margin: 0;
+    padding: 40px 60px 10px;
+}
+.educations-and-jobs-text p {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+.educations-and-jobs-list {
+    margin: 0;
+    padding: 10px 60px 40px;
+    font-size: 16px;
+    line-height: 1.6;
+    display: block;
+}
+.educations-and-jobs-list span {
+    display: block;
+}
+
+/*===========
+  projects
+  ==========*/
+
+.projects-loading-gif {
+   display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+}
+.projects-loading-text {
+ text-align: center;
+    margin-top: 10px;
+}
+.projects-loading-dots {
+    display: inline-block;
+    width: 30px;
+    text-align: left;
+}
+
+.projects-loading-dots:after {
+    content: "";
+    animation: loading-dots 1.5s infinite;
+}
+@keyframes loading-dots {
+    0% {
+        content: "";
+    }
+    25% {
+        content: ".";
+    }
+    50% {
+        content: "..";
+    }
+    75% {
+        content: "...";
+    }
+    100% {
+        content: "";
+    }
+
+}
+/*=========
+   PHONE
+============*/
+
+@media screen and (max-width: 500px) {
+    /*sidebar*/
+    .sidebar {
+        width: 95px;
+        padding: 15px;
+        font-size: 11px;
+    }
+    .page {
+        margin-left: 95px;
+    }
+    #sidebar-hero {
+        height: 60px;
+    }
+    #sidebar-hero-image {
+        width: 55px;
+        height: 80px;
+    }
+    /*Home*/
+    .hero {
+       justify-content: center;
+    }
+.hero-image {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+.contact-list {
+    flex-direction: column;
+    gap: 8px;
+}
+/*About*/
+    .about-text {
+        padding: 25px;
+    }
+
+    .about-image {
+        width: 70%;
+        height: auto;
+        margin: 25px auto 40px;
+    }
+    /*EducationAndJobs*/
+    .educations-and-jobs-text {
+        padding: 25px;
+    }
+    .educations-and-jobs-list {
+        padding: 25px;
+    }
+footer {
+    padding: 20px;
+}
 }
