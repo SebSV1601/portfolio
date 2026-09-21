@@ -226,7 +226,7 @@ padding: 40px 60px;
 
 .projects-loading-dots:after {
     content: "";
-    animation: loading-dots 1.5s infinite;
+    animation: loading-dots 2s infinite;
 }
 @keyframes loading-dots {
     0% {
